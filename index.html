@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="description" content="El Curioso Bar es un lugar para encuentros con amigos, con una gran variedad de cervezas y comidas para seleccionar.">
+    <meta name="keywords" content="BAR, CERVECERIA, BIRRA, HAMBURGUESA">
+    <title>El Curioso Bar</title>
+</head>
+
+<body>
+    <header class="cabecera d-flex px-0 d-flex justify-content-md-center sticky-top">
+        <nav class="cabecera__nav container-md navbar navbar-expand-md justify-content-around">
+            <a class="cabecera__logo navbar-brand pr-2 py-0 mx-0" href="index.html"><img src="media/logo-dorado.png" class="cabecera__logo__img img-fluid" alt="imagen logo"></a>    
+            <button class="navbar-toggler navbar-dark bg-transparent border border-light " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="cabecera__menu collapse navbar-collapse text-center justify-content-md-center" id="navbarNav">
+                <div class="navbar-nav">
+                    <a class="cabecera__menu__link nav-link" href="#">INICIO</a>
+                    <a class="cabecera__menu__link nav-link" href="#nosotros">NOSOTROS</a>
+                    <a class="cabecera__menu__link nav-link" href="#galeria">GALERÍA</a>
+                    <a class="cabecera__menu__link nav-link"  href="#beneficios">BENEFICIOS</a>
+                    <a class="cabecera__menu__link nav-link"  href="sucursales.html">SUCURSALES</a>
+                    <a class="cabecera__menu__link nav-link"  href="contacto.html">CONTACTO</a>
+                </div>
+                <div class="cabecera__redes d-flex flex-row justify-content-center d-md-none">
+                    <a href="https://www.facebook.com" class="px-2 pt-2" target="_blank" rel="noopener" rel="noreferrer"><img src="media/facebook.png" class="cabecera__redes__img img-fluid" alt="icono facebook"></a>
+                    <a href="https://www.instagram.com" class="px-2 pt-2" target="_blank" rel="noopener" rel="noreferrer"><img src="media/instagram.png" class="cabecera__redes__img img-fluid" alt="icono instagram" rel="noopener" rel="noreferrer"></a>
+                </div>
+            </div>
+            <div class="cabecera__redes d-none d-md-flex flex-column pl-2">
+                <a href="https://www.facebook.com" class="pb-2" target="_blank" rel="noopener" rel="noreferrer"><img src="media/facebook.png" class="cabecera__redes__img img-fluid" alt="icono facebook" ></a>
+                <a href="https://www.instagram.com" class="pt-2" target="_blank" rel="noopener" rel="noreferrer"><img src="media/instagram.png" class="cabecera__redes__img img-fluid" alt="icono instagram"></a>
+            </div>
+        </nav>      
+    </header>
+    
+    <div class="contenido">
+        <!-- Icono WhatsApp -->   
+        <a href="#" class="contWp" rel="noopener" rel="noreferrer"><img src="media/whatsapp.svg" alt="icono whatsapp"></a>        
+        
+        <!-- Carrousel de eventos o anuncios -->
+        <div class="container-fluid carrousel">
+            <div class="row justify-content-center w-100 px-0 mx-0">
+                <div class="col-md-6 px-0 mx-0">
+                    <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="media/carrousel/CerVariedad-Grande.png" class="d-none d-md-block w-100" alt="imagen carrousel 1">
+                                <img src="media/carrousel/CerVariedad-chico.png" class="d-block  d-md-none w-100" alt="imagen carrousel 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="media/carrousel/cervezaFria-Grande.png" class="d-none d-md-block w-100" alt="imagen carrousel 3">
+                                <img src="media/carrousel/cervezaFria-chico.png" class="d-block  d-md-none w-100" alt="imagen carrousel 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="media/carrousel/cumple-Grande.png" class="d-none d-md-block w-100" alt="imagen carrousel 5">
+                                <img src="media/carrousel/cumple-chico.png" class="d-block  d-md-none w-100" alt="imagen carrousel 6">
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>           
+        </div>
+        
+        
+        <!-- Sección Nosotros -->
+        <div id="nosotros" class="nos">
+            <h1 class="titulo-h1">El Curioso Bar</h1>
+            <div class="contenidoNosotros">
+                <div class="historia">
+                    <p class="titulos-nos font-weight-bold"><img src="media/logo-blanco.png" alt="icono logo"class="icono-nos">Historia</p>
+                    <h2>En el 2012, a partir de una juntada con amigos, surgio la idea de hacer un proyecto donde pudiéramos compartir nuestra pasión por la cerveza. <br>                
+                    Con el sueño de crear la pinta perfecta, comenzamos a explorar sabores, colores y texturas, hasta dar con las variedades que hoy producimos. Como la birra se toma en compañía, a nuestro sueño se unió el deseo de compartir esa afición con la gente. <br> Así nació El Curioso Bar, un lugar donde combinar el amor por la cerveza con momentos inolvidables.
+                    </h2>
+                </div>
+                <div>
+                    <p class="titulos-nos font-weight-bold"><img src="media/logo-blanco.png" alt="icono logo"class="icono-nos">Equipo</p>
+                    <img src="media/equipo.jpg" alt="imagen equipo">
+                </div>
+                <div>
+                    <p class="titulos-nos font-weight-bold"><img src="media/logo-blanco.png" alt="icono logo"class="icono-nos">Vision</p>
+                    <p>Nos proponemos brindar servicios de calidad, un ambiente cálido y la mejor selección de cervezas artesanales. Queremos que vengas por <span>curioso</span> y vuelvas por nuestro clima y sabores.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Galería de imagenes -->
+        <div id="galeria" class="gale">
+            <p class="titulo-sectores">-GALERÍA DE IMÁGENES-</p>
+            <div class="contenidoImagenes"> 
+                <img src="media/gale1.jpg" alt="galeria 1">
+                <img src="media/gale2.jpg" alt="galeria 2">
+                <img src="media/gale3.jpg" alt="galeria 3">
+                <img src="media/gale4.jpg" alt="galeria 4">
+                <img src="media/gale5.jpg" alt="galeria 5">
+                <img src="media/gale6.jpg" alt="galeria 6">
+                <img src="media/gale7.jpg" alt="galeria 7">
+                <img src="media/gale8.jpg" alt="galeria 8">
+            </div>
+        </div>
+
+        <!-- Sección Beneficios VIP -->
+        <div id="beneficios" class="bene">
+            <img src="media/VIP-gold.png" alt="imagen vip">
+            <table>
+                <tr>
+                    <th>BENEFICIO</th>
+                    <th>DETALLES</th>
+                </tr>
+                <tr>
+                    <td>Cervezas 2x1</td>
+                    <td>Cervezas seleccionadas del día de 18:00hs a 20:00hs.</td>
+                </tr>
+                <tr>
+                    <td>Papas 2x1</td>
+                    <td>Papas Bravas de 18:00hs a 20:00hs.</td>
+                </tr>
+                <tr>
+                    <td>Happy Hour Plus</td>
+                    <td>Horario Happy Hour extendido por una hora más.</td>
+                </tr>
+                <tr>
+                    <td>Feliz Cumple</td>
+                    <td>15% de descuento en el total el día de tu cumpleaños.</td>
+                </tr>
+                <tr>
+                    <td>Merchandising</td>
+                    <td>Acceso a los artículos exclusivos de nuestros artículos.</td>
+                </tr>
+                <tr>
+                    <td>Eventos</td>
+                    <td>Enterate antes que nadie de los eventos que se vienen!</td>
+                </tr>
+            </table>
+            <img src="media/VIP-gold.png" alt="imagen vip">
+        </div>
+
+        <!-- Sección Contacto -->
+        <div id="contacto" class="contenidoContacto">
+            <p class="titulo-sectores">-CONTACTO-</p>
+            <div class="datos">
+                <div><p><span>EMAIL:</span> INFO@ELCURIOSOBAR.COM</p></div>
+                <div><p><span>EMPLEO:</span> CV@ELCURIOSOBAR.COM</p></div>
+                <div class="news">
+                    <!-- Formulario para newslatter de eventos/anuncios -->
+                    <form action="" method="post">
+                        <label class="formu" for="correo"> Suscribite para enterarte sobre nuestros eventos:</label><br>
+                        <input type="email" name= "correo" id="correo" placeholder="Ej: nombre@gmail.com">
+                        <input type="submit" name="enviar" value="Enviar">
+                    </form>
+                </div>
+                <div class="contenidoRedes">
+                    <h3>Medios de contacto</h3>
+                    <div class="redesDeContenido">
+                        <a href="" target="_blank" rel="noopener" rel="noreferrer"><img src="media/whatsapp-bl.png" alt="icono whatsapp"></a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" rel="noreferrer"><img src="media/facebook-bl.png" alt="icono facebook"></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" rel="noreferrer"><img src="media/instagram-bl.png" alt="icono instagram"></a>
+                    </div>  
+                </div>
+            </div>  
+            <div class="sucurCercana">
+                <h3>Sede principal</h3>
+                <img src="media/mapa.PNG" alt="imagen mapa">
+            </div>        
+        </div>
+    </div>
+
+    <!-- Footer con links -->
+    <div class="footer">        
+        <ul class="footer__ul">
+            <li class="footer__ul__li footer--no-border"><a class="footer__ul__li__a" href="#"> INICIO </a></li>
+            <li class="footer__ul__li"><a class="footer__ul__li__a" href="#beneficios"> BENEFICIOS </a></li>
+            <li class="footer__ul__li"><a class="footer__ul__li__a" href="#nosotros"> NOSOTROS </a></li>
+            <li class="footer__ul__li"><a class="footer__ul__li__a" href="sucursales.html"> SUCURSALES </a></li>
+            <li class="footer__ul__li"><a class="footer__ul__li__a" href="contacto.html"> CONTACTO </a></li>          
+            <li class="footer__ul__li"><a class="footer__ul__li__a" href="#galeria"> GALERÍA </a></li>
+        </ul>        
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

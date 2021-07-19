@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: $fuente;    
+}
+
+/* Títulos */
+.titulo-h1{
+    color: rgb(218, 165, 32);
+    background-color: rgba(255, 255, 255, 0.938);
+    margin:1rem auto;
+    padding: .5rem;
+    border-radius: 20px;
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight:700;     
+    text-align: center;
+}
+.titulo-sectores{
+    color: $letra-blanco;
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    font-weight:700;      
+    margin-bottom: 1rem;   
+}
+h3{    
+    color: $letra-blanco;
+    font-size: 1.4rem;
+    font-weight:400;  
+    margin-bottom: 1.2rem;
+}
+body{
+    background-color: $bg-verde-oscuro;
+    width:100%;
+}
+
+/* Font Weight */
+@each $j, $c in $font-weight{
+	.font-weight-#{$j}{
+		font-weight: $c;
+	}
+}
+
+/* --------------- CONTENIDO INDEX*/
+.contenido{
+    width: 100%;
+    /* Icono WhatsApp flotante */
+    .contWp{ 
+        position: fixed;
+        height: 70px;
+        width: 70px;    
+        bottom: 1.5rem;
+        right: 1.5rem;            
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        img{
+            width: 100%;
+        }
+    }
+
+    /* CARROUSEL */
+    .carrousel{        
+        background-color: black;
+        padding: .5rem 0;
+    }
+
+    /* Sección NOSOTROS */
+    .nos{    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;    
+        width: 100%;    
+        padding: 1rem 0;
+        background-image: url(../media/fondo-barra.jpg);
+        background-size: cover;
+        background-position: center;
+        h1{
+            font-size: 2rem;            
+            /* color: white;
+            background-color: rgba(0, 0, 0, 0.74);  */          
+            letter-spacing: .4rem;
+        }
+        .contenidoNosotros{            
+            @include flex-dir-jus(column,center);
+            align-items: center;
+            padding: 0 2rem;
+            div{
+                background-color: rgba(0, 0, 0, 0.74);
+                width: 100%;
+                padding: 1rem;
+                margin: 1rem 0;
+                border-radius: 10px;
+                .titulos-nos{
+                    font-size: 1.5rem;
+                    margin-bottom: .5rem;                                                  
+                }
+                h2{
+                    text-align: justify;
+                    color: $letra-blanco;
+                    line-height: 1.6;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                } 
+                p{
+                    text-align: justify;
+                    color: $letra-blanco;
+                    line-height: 1.6;
+                    font-size: 1.2rem;
+                    span{
+                        font-style: italic;
+                    }
+                }
+                .icono-nos{
+                    width: 10%;                
+                    margin-right: 1rem;                
+                }
+                img{
+                    width: 100%;
+                    border-radius: 10px; 
+                }
+
+            }            
+            @media all and (min-width: $point-md){
+                @include flex-dir-jus(row, space-around);          
+                align-items:stretch;
+                div{
+                    width: 30%;
+                    padding: 1rem;  
+                    .icono-nos{
+                        width: 7%;   
+                    }                          
+                }
+                
+            }
+        }
+    }
+
+    /* Sección GALERIA */
+    .gale{        
+        display: flex;
+        flex-direction: column;
+        justify-content:center;        
+        align-items: center;
+        width: 100%;    
+        padding: 1rem 0;    
+        background-color: $bg-negro;
+        .contenidoImagenes{
+            display: flex;
+            flex-wrap: wrap;   
+            justify-content: space-evenly;
+            img{
+                width: 24%;
+                margin: 1rem;    
+                border-radius: 10px;
+                transform: scale(1);
+                transition: 0.1s;
+                object-fit: cover;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: 0.1s;  
+                }
+            }   
+        }
+    }
+
+    /* Sección BENEFICIOS */    
+    .bene{    
+        @include flex-dir-jus(column,space-around); 
+        align-items:center;
+        border-top: gold 4px solid;
+        border-bottom: gold 4px solid;
+        padding: 2rem;
+        background: linear-gradient(to bottom, #032c27, black,#032c27);        
+        img{
+            width: 20%;
+        }
+        table{
+            color: #daa520;
+            border: #daa520 4px solid;
+            border-radius: 10px;            
+            margin: 2rem 0;            
+            tr th,td{
+                font-size: 1.3rem;
+                padding: .5rem;
+            }
+        }
+        @media all and (min-width: $point-lg){
+            flex-direction: row;            
+        }               
+    }
+    
+    /* Sección CONTACTO HOME*/
+    .contenidoContacto{
+        @include flex-dir-jus(column, space-around); 
+        align-items: center;
+        width:100%;
+        background-color:$bg-negro;
+        
+        padding: 1rem 0;
+        .titulo-sectores{
+            width: 100%;
+        }
+        .datos{
+            width: 100%; 
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            align-items:start; 
+            padding-bottom: 1rem;
+            div{
+                width:95%;
+                margin: 0 1rem;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 700;
+                letter-spacing:.1rem;
+                color: white;    
+                padding-bottom: 1rem;
+            }
+            .news{ 
+                .formu{
+                font-size: 1rem;
+                font-weight: 700;
+                letter-spacing:2px;
+                color: white;
+                }
+                #correo{
+                    margin: 0.5rem 0;
+                    width: 70%;
+                }
+            }
+            .contenidoRedes{
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                align-self: center;
+                margin: 1rem 0;
+                width: 100%;
+                .redesDeContenido{     
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 100%;
+                    a{ 
+                        width: 8%;      
+                        margin:0 1rem;                        
+                    }
+                    img{
+                        width: 100%;
+                    }    
+                }
+            }
+        }
+        .sucurCercana{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 1rem;
+            img{
+                width: 80%;
+                border: white 2px solid;
+                border-radius:5px;
+            }
+        }
+        @media all and (min-width: $point-md){
+            flex-flow: wrap;
+            .datos{
+                width: 40%;
+                justify-content:space-evenly;
+                padding: 0;                
+            }
+            .sucurCercana{                
+                width: 40%;
+            }
+        }
+    }    
+}
+
+/* --------------- CONTENIDO HTML SUCURSALES*/
+.sucursales{
+    background-color: $bg-negro;
+    @include flex-dir-jus(column, center);
+    .card{
+        background-color: $bg-verde-oscuro;
+        button{
+            color: $letra-blanco;
+            font-weight: 700;
+            font-size: 1.2rem;            
+        }        
+        .card-header{
+            background-color: $bg-verde-claro;        
+        }
+        .collapse{            
+            width: 100%;       
+            .card-body{            
+                background-color: rgba(0, 0, 0, 0.212);
+                border-radius: 10px;                
+                p{
+                    text-align: center;
+                    color: $letra-blanco;
+                    font-size: 1.1rem;          
+                }
+                iframe{
+                    border-radius: 10px;  
+                    width: 100%;                                         
+                } 
+            }
+            @media all and (min-width:$point-md){
+                width: 60%;
+            } 
+        }
+                           
+    }
+}
+
+/* --------------- CONTENIDO HTML CONTACTO*/
+
+/* Grid contacto */
+.grillaPadre{     
+    display: grid;
+    grid-template-areas: 
+    "nav nav"
+    "rell rell"
+    "contacto contacto"
+    "foot foot";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto 20% auto auto;
+    justify-items: center;    
+    .Gcabecera{              
+        grid-area: nav;
+        width:100%;    
+    }
+    .rellenoImg{
+        grid-area: rell;
+        justify-self: stretch;
+        background-image: url("../media/contacto-img2.jpg");
+        background-size:cover;
+        display: flex;   
+        justify-content: center;   
+        align-items: center;
+        p{
+            color: $letra-blanco;  
+            background-color: rgba(0, 0, 0, 0.329);  
+            font-weight:700;    
+            font-size: 1.7rem;
+            letter-spacing:1px;
+            text-shadow: 4px 4px 3px goldenrod;
+            text-align: center;
+            margin: 0 .3rem;
+            border-radius: 10px;
+        }        
+    }
+    .contacto{    
+        grid-area: contacto;            
+        justify-self: stretch;       
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+        
+        .contContacto{ 
+            @include flex-dir-jus(column, center);   
+            height:100%;
+            h2{
+                color: #daa520;
+                background-color: rgba(255, 255, 255, 0.938);
+                margin:1rem auto;
+                padding: .5rem;
+                border-radius: 20px;                
+            }
+            form{
+                width: 90%;
+                display: flex;
+                flex-direction: column;      
+                align-self: center;
+                label{
+                    color: $letra-blanco;
+                    font-weight:700;    
+                    font-size: 1.3rem;
+                    letter-spacing:1px;
+                }
+                input{
+                    width: 100%;                    
+                    margin-top: 0.7rem;
+                    margin-bottom: 1rem;  
+                    border-radius: 5px;
+                     
+                }
+                textarea{
+                    max-width: 100%;
+                    max-height: 10rem;
+                    width: 100%;
+                    height: 10rem;
+                    margin-top: 0.7rem;
+                    margin-bottom: 1rem;
+                    border-radius: 5px;                
+                }
+                .boton {                    
+                    font-size:1rem;
+                    font-weight:600;
+                    letter-spacing:0.2rem;
+                    background-color:$bg-verde-claro;
+                    color: $letra-blanco;
+                    align-self: center;
+                    height: 2rem !important;
+                    width:30% !important;
+                }   
+            }
+        }         
+    }
+    .piePagina{    
+        grid-area: foot;
+        justify-self: stretch;
+    }
+    @media all and (min-width: $point-md){
+        grid-template-areas:        
+        "nav nav"
+        "rell contacto"
+        "foot foot";
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto auto auto;
+        justify-items: center;
+        
+    }
+
+}
+
+  

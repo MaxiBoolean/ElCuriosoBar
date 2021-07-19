@@ -1,0 +1,25 @@
+.cabecera{
+    border-bottom: 1px solid #ccc;
+    background-color: $bg-verde-claro;
+    &__logo{
+        width: 4rem;
+        &__img{
+            min-width: 2.5rem; 
+        }    
+    }
+    &__menu__link{       
+        color: $letra-blanco;
+        font-weight:700;    
+        font-size: 1rem;
+        letter-spacing:1px;        
+        &:hover{
+            color:$letra-verde-claro;
+            background-color:rgba(255, 255, 255, 0.932);
+            border-radius: 20px;
+        }
+    }
+    &__redes__img{
+        min-width: 1.5rem;
+        width: 2rem; 
+    }
+}
