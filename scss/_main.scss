@@ -12,18 +12,15 @@
     padding: .5rem;
     border-radius: 20px;
     letter-spacing: .2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-style: italic;
     font-weight:700;     
-    text-align: center;
-    img{
-        width: 2.2rem;
-    }
+    text-align: center;    
 }
 .titulo-sectores{
     color: $letra-blanco;
     letter-spacing: .2rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-style: italic;
     text-align: center;
     font-weight:700;      
@@ -78,16 +75,23 @@ body{
         justify-content:center;
         align-items: center;    
         width: 100%;    
-        padding: 1rem 0;
+        padding: 98px 0 50px 0;
         background-image: url(../media/fondo-barra.jpg);
         background-size: cover;
         background-position: center;
         h1{
+            margin-bottom: 50px;
             background-color: rgb(255, 255, 255);
             font-size: 1.7rem;
             letter-spacing: .4rem;   
+            img{
+                width: 2.2rem;
+            }
             @media all and (min-width: $point-md){
                 font-size: 2.5rem;
+                img{
+                    width: 2.9rem;               
+                }
             }         
         }
         .contenidoNosotros{            
@@ -128,8 +132,20 @@ body{
                     width: 100%;
                     border-radius: 10px; 
                 }
-            }            
-            @media all and (min-width: $point-md){
+                @media all and (min-width: $point-md){
+                    .icono-nos{
+                        width: 5%;                
+                        margin-right: 1rem;                
+                    }
+                    img{                        
+                        width: 100%;
+                        border-radius: 10px; 
+                        object-fit: cover;
+                    }
+                }         
+            }
+               
+            @media all and (min-width: $point-lg){
                 @include flex-dir-jus(row, space-around);          
                 align-items:stretch;                
                 div{
@@ -138,8 +154,7 @@ body{
                     .icono-nos{
                         width: 7%;   
                     }                          
-                }
-                
+                }                
             }
         }
     }
@@ -151,7 +166,7 @@ body{
         justify-content:center;        
         align-items: center;
         width: 100%;    
-        padding: 1rem 0;    
+        padding: 98px 0 50px 0;    
         background-color: $bg-negro;
         .contenidoImagenes{
             display: flex;
@@ -180,6 +195,7 @@ body{
         border-bottom: gold 4px solid;
         padding: 2rem;
         background: linear-gradient(to bottom, #032c27, black,#032c27);        
+        padding: 98px 0 50px 0;
         img{
             width: 20%;
         }
@@ -393,7 +409,20 @@ body{
                     margin-top: 0.7rem;
                     margin-bottom: 1rem;  
                     border-radius: 5px;
-                     
+                    padding: .2rem;
+                    border: 2px goldenrod solid; 
+                    outline: none;
+                    &.boton {     
+                        font-size:1rem;
+                        font-weight:600;
+                        letter-spacing:0.2rem;
+                        background-color:$bg-verde-claro;
+                        color: $letra-blanco;
+                        align-self: center;
+                        height: 2rem;
+                        width:30%;
+                        border: none;
+                    }                       
                 }
                 textarea{
                     max-width: 100%;
@@ -402,18 +431,11 @@ body{
                     height: 10rem;
                     margin-top: 0.7rem;
                     margin-bottom: 1rem;
-                    border-radius: 5px;                
+                    border-radius: 5px;  
+                    outline: none; 
+                    border: 2px goldenrod solid;             
                 }
-                .boton {                    
-                    font-size:1rem;
-                    font-weight:600;
-                    letter-spacing:0.2rem;
-                    background-color:$bg-verde-claro;
-                    color: $letra-blanco;
-                    align-self: center;
-                    height: 2rem !important;
-                    width:30% !important;
-                }   
+                
             }
         }         
     }
