@@ -57,6 +57,10 @@
   text-align: center;
 }
 
+.titulo-h1 img {
+  width: 2.2rem;
+}
+
 .titulo-sectores {
   color: white;
   letter-spacing: .2rem;
@@ -144,9 +148,8 @@ body {
 }
 
 .contenido .nos h1 {
+  background-color: white;
   font-size: 2rem;
-  /* color: white;
-            background-color: rgba(0, 0, 0, 0.74);  */
   letter-spacing: .4rem;
 }
 

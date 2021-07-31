@@ -16,6 +16,9 @@
     font-style: italic;
     font-weight:700;     
     text-align: center;
+    img{
+        width: 2.2rem;
+    }
 }
 .titulo-sectores{
     color: $letra-blanco;
@@ -80,10 +83,9 @@ body{
         background-size: cover;
         background-position: center;
         h1{
-            font-size: 2rem;            
-            /* color: white;
-            background-color: rgba(0, 0, 0, 0.74);  */          
-            letter-spacing: .4rem;
+            background-color: rgb(255, 255, 255);
+            font-size: 2rem;
+            letter-spacing: .4rem;            
         }
         .contenidoNosotros{            
             @include flex-dir-jus(column,center);
