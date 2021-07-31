@@ -149,8 +149,14 @@ body {
 
 .contenido .nos h1 {
   background-color: white;
-  font-size: 2rem;
+  font-size: 1.7rem;
   letter-spacing: .4rem;
+}
+
+@media all and (min-width: 768px) {
+  .contenido .nos h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .contenido .nos .contenidoNosotros {
@@ -267,7 +273,7 @@ body {
 }
 
 .contenido .gale .contenidoImagenes img {
-  width: 24%;
+  width: 18rem;
   margin: 1rem;
   border-radius: 10px;
   -webkit-transform: scale(1);
