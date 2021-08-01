@@ -237,22 +237,40 @@ body{
                 margin: 0 1rem;
             }
             p{
-                font-size: 1rem;
+                text-align: center;
+                font-size: 1.1rem;
                 font-weight: 700;
                 letter-spacing:.1rem;
                 color: white;    
-                padding-bottom: 1rem;
+                padding-bottom: .5rem;
             }
             .news{ 
                 .formu{
-                font-size: 1rem;
-                font-weight: 700;
-                letter-spacing:2px;
-                color: white;
+                    text-align: center;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    letter-spacing:2px;
+                    color: white;                
                 }
                 #correo{
                     margin: 0.5rem 0;
-                    width: 70%;
+                    width: 70%;                    
+                }
+                input{
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                    padding: .2rem;
+                    &.btn-enviar{
+                        font-size:1rem;
+                        font-weight:600;
+                        letter-spacing:0.2rem;
+                        background-color:$bg-verde-claro;
+                        color: $letra-blanco;
+                        align-self: center;                        
+                        width:15%;
+                        border: none;
+                    }
                 }
             }
             .contenidoRedes{
@@ -302,158 +320,3 @@ body{
         }
     }    
 }
-
-/* --------------- CONTENIDO HTML SUCURSALES*/
-.sucursales{
-    background-color: $bg-negro;
-    @include flex-dir-jus(column, center);
-    .card{
-        background-color: $bg-verde-oscuro;
-        button{
-            color: $letra-blanco;
-            font-weight: 700;
-            font-size: 1.2rem;            
-        }        
-        .card-header{
-            background-color: $bg-verde-claro;        
-        }
-        .collapse{            
-            width: 100%;       
-            .card-body{            
-                background-color: rgba(0, 0, 0, 0.212);
-                border-radius: 10px;                
-                p{
-                    text-align: center;
-                    color: $letra-blanco;
-                    font-size: 1.1rem;          
-                }
-                iframe{
-                    border-radius: 10px;  
-                    width: 100%;                                         
-                } 
-            }
-            @media all and (min-width:$point-md){
-                width: 60%;
-            } 
-        }
-                           
-    }
-}
-
-/* --------------- CONTENIDO HTML CONTACTO*/
-
-/* Grid contacto */
-.grillaPadre{     
-    display: grid;
-    grid-template-areas: 
-    "nav nav"
-    "rell rell"
-    "contacto contacto"
-    "foot foot";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: auto 20% auto auto;
-    justify-items: center;    
-    .Gcabecera{              
-        grid-area: nav;
-        width:100%;    
-    }
-    .rellenoImg{
-        grid-area: rell;
-        justify-self: stretch;
-        background-image: url("../media/contacto-img2.jpg");
-        background-size:cover;
-        display: flex;   
-        justify-content: center;   
-        align-items: center;
-        p{
-            color: $letra-blanco;  
-            background-color: rgba(0, 0, 0, 0.329);  
-            font-weight:700;    
-            font-size: 1.7rem;
-            letter-spacing:1px;
-            text-shadow: 4px 4px 3px goldenrod;
-            text-align: center;
-            margin: 0 .3rem;
-            border-radius: 10px;
-        }        
-    }
-    .contacto{    
-        grid-area: contacto;            
-        justify-self: stretch;       
-        padding-bottom: 1rem;
-        padding-top: 2rem;
-        
-        .contContacto{ 
-            @include flex-dir-jus(column, center);   
-            height:100%;
-            h2{
-                color: #daa520;
-                background-color: rgba(255, 255, 255, 0.938);
-                margin:1rem auto;
-                padding: .5rem;
-                border-radius: 20px;                
-            }
-            form{
-                width: 90%;
-                display: flex;
-                flex-direction: column;      
-                align-self: center;
-                label{
-                    color: $letra-blanco;
-                    font-weight:700;    
-                    font-size: 1.3rem;
-                    letter-spacing:1px;
-                }
-                input{
-                    width: 100%;                    
-                    margin-top: 0.7rem;
-                    margin-bottom: 1rem;  
-                    border-radius: 5px;
-                    padding: .2rem;
-                    border: 2px goldenrod solid; 
-                    outline: none;
-                    &.boton {     
-                        font-size:1rem;
-                        font-weight:600;
-                        letter-spacing:0.2rem;
-                        background-color:$bg-verde-claro;
-                        color: $letra-blanco;
-                        align-self: center;
-                        height: 2rem;
-                        width:30%;
-                        border: none;
-                    }                       
-                }
-                textarea{
-                    max-width: 100%;
-                    max-height: 10rem;
-                    width: 100%;
-                    height: 10rem;
-                    margin-top: 0.7rem;
-                    margin-bottom: 1rem;
-                    border-radius: 5px;  
-                    outline: none; 
-                    border: 2px goldenrod solid;             
-                }
-                
-            }
-        }         
-    }
-    .piePagina{    
-        grid-area: foot;
-        justify-self: stretch;
-    }
-    @media all and (min-width: $point-md){
-        grid-template-areas:        
-        "nav nav"
-        "rell contacto"
-        "foot foot";
-        grid-template-columns: 40% 60%;
-        grid-template-rows: auto auto auto;
-        justify-items: center;
-        
-    }
-
-}
-
-  
