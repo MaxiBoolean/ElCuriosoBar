@@ -530,7 +530,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   padding: .2rem 0;
   border-top: 1px solid #ccc;
 }
@@ -539,15 +538,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
 }
 
 .footer__ul__li {
-  list-style: none !important;
+  list-style: none;
   margin: 0 .2rem;
 }
 
@@ -555,16 +557,12 @@ body {
   text-decoration: none !important;
   color: grey;
   font-weight: 700;
-  font-size: 0.5rem;
+  font-size: .8rem;
   letter-spacing: .1rem;
 }
 
 .footer__ul__li__a:hover {
   color: white;
-}
-
-.footer .footer--no-border {
-  border-left: none;
 }
 
 @media all and (min-width: 768px) {
@@ -581,6 +579,10 @@ body {
     font-size: 0.7rem;
     letter-spacing: .2rem;
   }
+}
+
+.footer .footer--no-border {
+  border-left: none;
 }
 
 /* --------------- CONTENIDO HTML SUCURSALES*/
