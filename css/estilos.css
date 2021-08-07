@@ -69,9 +69,10 @@
 
 h3 {
   color: white;
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 700;
   margin-bottom: 1.2rem;
+  letter-spacing: 2px;
 }
 
 body {
@@ -105,10 +106,10 @@ body {
 
 .contenido .contWp {
   position: fixed;
-  height: 70px;
-  width: 70px;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  height: 50px;
+  width: 50px;
+  bottom: 4rem;
+  right: .5rem;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -117,6 +118,14 @@ body {
 
 .contenido .contWp img {
   width: 100%;
+}
+
+@media all and (min-width: 768px) {
+  .contenido .contWp {
+    height: 70px;
+    width: 70px;
+    right: 1.5rem;
+  }
 }
 
 .contenido .carrousel {
@@ -391,57 +400,28 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .contenido .contenidoContacto .datos div {
-  width: 95%;
-  margin: 0 1rem;
+  width: 100%;
+  padding: 0 .5rem;
 }
 
 .contenido .contenidoContacto .datos p {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: .1rem;
-  color: white;
+  color: goldenrod;
   padding-bottom: .5rem;
 }
 
-.contenido .contenidoContacto .datos .news .formu {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 2px;
+.contenido .contenidoContacto .datos p span {
   color: white;
 }
 
-.contenido .contenidoContacto .datos .news #correo {
-  margin: 0.5rem 0;
-  width: 70%;
-}
-
-.contenido .contenidoContacto .datos .news input {
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  padding: .2rem;
-}
-
-.contenido .contenidoContacto .datos .news input.btn-enviar {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.2rem;
-  background-color: #096e64;
-  color: white;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  width: 15%;
-  border: none;
-}
-
-.contenido .contenidoContacto .datos .contenidoRedes {
+.contenido .contenidoContacto .datos form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,36 +429,46 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  margin: 1rem 0;
-  width: 100%;
-}
-
-.contenido .contenidoContacto .datos .contenidoRedes .redesDeContenido {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  padding: 0 .5rem;
 }
 
-.contenido .contenidoContacto .datos .contenidoRedes .redesDeContenido a {
-  width: 8%;
-  margin: 0 1rem;
+.contenido .contenidoContacto .datos form label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  color: white;
 }
 
-.contenido .contenidoContacto .datos .contenidoRedes .redesDeContenido img {
+.contenido .contenidoContacto .datos form #correo {
+  margin: .5rem 0;
   width: 100%;
+  border: goldenrod 2px solid;
+  font-weight: 700;
+}
+
+.contenido .contenidoContacto .datos form input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: .2rem;
+}
+
+.contenido .contenidoContacto .datos form input.btn-enviar {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  background-color: #096e64;
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 30%;
+  border: none;
 }
 
 .contenido .contenidoContacto .sucurCercana {
@@ -493,13 +483,64 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin-bottom: 1rem;
+  padding: 0 .5rem;
 }
 
-.contenido .contenidoContacto .sucurCercana img {
-  width: 80%;
-  border: white 2px solid;
+.contenido .contenidoContacto .sucurCercana h3 {
+  margin-bottom: .5rem;
+}
+
+.contenido .contenidoContacto .sucurCercana p {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  color: goldenrod;
+}
+
+.contenido .contenidoContacto .sucurCercana iframe {
+  width: 100%;
+  border: goldenrod 2px solid;
   border-radius: 5px;
+}
+
+.contenido .contenidoContacto .contenidoRedes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 1.5rem 0 1rem 0;
+  width: 100%;
+}
+
+.contenido .contenidoContacto .contenidoRedes .redesDeContenido {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.contenido .contenidoContacto .contenidoRedes .redesDeContenido a {
+  width: 13%;
+  margin: 0 1rem;
+}
+
+.contenido .contenidoContacto .contenidoRedes .redesDeContenido img {
+  width: 100%;
 }
 
 @media all and (min-width: 768px) {
@@ -507,15 +548,57 @@ body {
     -ms-flex-flow: wrap;
         flex-flow: wrap;
   }
+  .contenido .contenidoContacto h3 {
+    font-size: 1.2rem;
+  }
   .contenido .contenidoContacto .datos {
-    width: 40%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    width: 45%;
+    padding: 0;
+    margin: 0;
+  }
+  .contenido .contenidoContacto .datos div {
     padding: 0;
   }
+  .contenido .contenidoContacto .datos p {
+    font-size: 1.2rem;
+  }
+  .contenido .contenidoContacto .datos form label {
+    font-size: 1.2rem;
+  }
+  .contenido .contenidoContacto .datos form #correo {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 100%;
+  }
   .contenido .contenidoContacto .sucurCercana {
-    width: 40%;
+    width: 45%;
+    padding: 0;
+  }
+  .contenido .contenidoContacto .sucurCercana iframe {
+    width: 100%;
+    height: 200px;
+    -webkit-box-shadow: 0 0 1.5rem 1px goldenrod;
+            box-shadow: 0 0 1.5rem 1px goldenrod;
+  }
+  .contenido .contenidoContacto .contenidoRedes {
+    margin-top: 3rem;
+  }
+  .contenido .contenidoContacto .contenidoRedes .redesDeContenido a {
+    width: 5%;
+  }
+}
+
+@media all and (min-width: 768px) and (min-width: 980px) {
+  .contenido .contenidoContacto .datos form #correo {
+    width: 70%;
+  }
+  .contenido .contenidoContacto .sucurCercana iframe {
+    width: 70%;
+    height: 250px;
+  }
+  .contenido .contenidoContacto .contenidoRedes .redesDeContenido a {
+    width: 3%;
   }
 }
 

@@ -28,9 +28,10 @@
 }
 h3{    
     color: $letra-blanco;
-    font-size: 1.4rem;
-    font-weight:400;  
+    font-size: 1rem;
+    font-weight:700;  
     margin-bottom: 1.2rem;
+    letter-spacing:2px;
 }
 body{
     background-color: $bg-verde-oscuro;
@@ -50,16 +51,21 @@ body{
     /* Icono WhatsApp flotante */
     .contWp{ 
         position: fixed;
-        height: 70px;
-        width: 70px;    
-        bottom: 1.5rem;
-        right: 1.5rem;            
+        height: 50px;
+        width: 50px;    
+        bottom: 4rem;
+        right: .5rem;            
         border-radius: 50%;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         z-index: 100;
         img{
             width: 100%;
         }
+        @media all and (min-width: $point-md){
+            height: 70px;
+            width: 70px;
+            right: 1.5rem; 
+        } 
     }
 
     /* CARROUSEL */
@@ -219,9 +225,8 @@ body{
         @include flex-dir-jus(column, space-around); 
         align-items: center;
         width:100%;
-        background-color:$bg-negro;
-        
-        padding: 1rem 0;
+        background-color:$bg-negro;        
+        padding: 1rem 0;        
         .titulo-sectores{
             width: 100%;
         }
@@ -231,30 +236,38 @@ body{
             flex-direction: column;
             justify-content:space-evenly;
             align-items:start; 
-            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
             div{
-                width:95%;
-                margin: 0 1rem;
+                width:100%; 
+                padding: 0 .5rem;               
             }
             p{
                 text-align: center;
-                font-size: 1.1rem;
+                font-size: 1rem;
                 font-weight: 700;
                 letter-spacing:.1rem;
-                color: white;    
+                color: goldenrod;    
                 padding-bottom: .5rem;
+                span{
+                    color: white;
+                }
             }
-            .news{ 
-                .formu{
+            form{
+                @include flex-dir-jus(column,center);
+                width: 100%;
+                padding: 0 .5rem;
+                label{
                     text-align: center;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                     font-weight: 700;
-                    letter-spacing:2px;
+                    letter-spacing:.1rem;
                     color: white;                
                 }
                 #correo{
-                    margin: 0.5rem 0;
-                    width: 70%;                    
+                    margin: .5rem 0;
+                    width: 100%; 
+                    border:goldenrod 2px solid; 
+                    font-weight: 700;
                 }
                 input{
                     outline: none;
@@ -264,58 +277,122 @@ body{
                     &.btn-enviar{
                         font-size:1rem;
                         font-weight:600;
-                        letter-spacing:0.2rem;
+                        letter-spacing:.1rem;
                         background-color:$bg-verde-claro;
                         color: $letra-blanco;
                         align-self: center;                        
-                        width:15%;
+                        width:30%;
                         border: none;
                     }
                 }
-            }
-            .contenidoRedes{
-                display: flex;
-                flex-direction: column;
-                align-items: center; 
-                align-self: center;
-                margin: 1rem 0;
-                width: 100%;
-                .redesDeContenido{     
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    width: 100%;
-                    a{ 
-                        width: 8%;      
-                        margin:0 1rem;                        
-                    }
-                    img{
-                        width: 100%;
-                    }    
-                }
-            }
+            }            
         }
         .sucurCercana{
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;  
+            padding: 0 .5rem;  
+            h3{
+                margin-bottom: .5rem;
+            } 
+            p{
+                font-size:1rem;
+                font-weight:700;
+                letter-spacing:.1rem;
+                color: goldenrod;
+            }       
+            iframe{
+                width: 100%;
+                border: goldenrod 2px solid;
+                border-radius:5px;                
+            }
+        }
+        .contenidoRedes{
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            align-self: center;
+            margin: 1.5rem 0 1rem 0;
             width: 100%;
-            margin-bottom: 1rem;
-            img{
-                width: 80%;
-                border: white 2px solid;
-                border-radius:5px;
+            .redesDeContenido{     
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                a{ 
+                    width: 13%;      
+                    margin:0 1rem;                        
+                }
+                img{
+                    width: 100%;
+                }    
             }
         }
         @media all and (min-width: $point-md){
             flex-flow: wrap;
+            h3{
+                font-size: 1.2rem;
+            }
             .datos{
-                width: 40%;
-                justify-content:space-evenly;
-                padding: 0;                
+                width: 45%;                
+                padding: 0;
+                margin:0;
+                div{  
+                    padding: 0;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+                form{
+                    label{
+                        font-size: 1.2rem;
+                    }                    
+                    #correo{
+                        align-self: center;
+                        width: 100%;
+                    }                    
+                }             
             }
             .sucurCercana{                
-                width: 40%;
+                width: 45%;
+                padding: 0;
+                iframe{
+                    width: 100%;
+                    height: 200px;
+                    box-shadow:0 0 1.5rem 1px goldenrod;
+                   
+                }
+            }
+            .contenidoRedes{
+                margin-top: 3rem;
+                .redesDeContenido{
+                    a{ 
+                        width: 5%;                       
+                    }                      
+                }
+            }
+            @media all and (min-width: $point-lg){
+                .datos{
+                    form{            
+                        #correo{                        
+                            width: 70%;
+                        }                    
+                    }    
+                }  
+                .sucurCercana{ 
+                    iframe{
+                        width: 70%;
+                        height: 250px;                        
+                    }
+                }
+                .contenidoRedes{                    
+                    .redesDeContenido{
+                        a{ 
+                            width: 3%;                       
+                        }                      
+                    }
+                }
             }
         }
     }    
