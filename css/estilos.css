@@ -318,6 +318,30 @@ body {
 }
 
 .contenido .bene {
+  border-top: gold 4px solid;
+  border-bottom: gold 4px solid;
+  background: -webkit-gradient(linear, left top, left bottom, from(#032c27), color-stop(black), to(#032c27));
+  background: linear-gradient(to bottom, #032c27, black, #032c27);
+  padding-top: 98px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.contenido .bene .row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contenido .bene .row .titulo-sectores {
+  color: goldenrod;
+}
+
+.contenido .bene .row h3 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.contenido .bene .row .cont_bene {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,42 +349,33 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-top: gold 4px solid;
-  border-bottom: gold 4px solid;
-  padding: 2rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#032c27), color-stop(black), to(#032c27));
-  background: linear-gradient(to bottom, #032c27, black, #032c27);
-  padding: 98px 0 50px 0;
-}
-
-.contenido .bene img {
-  width: 20%;
-}
-
-.contenido .bene table {
-  color: #daa520;
-  border: #daa520 4px solid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-content: center;
+  background-color: white;
+  margin: 1rem 0 1rem 0;
+  padding: 1rem .3rem;
   border-radius: 10px;
-  margin: 2rem 0;
+  border: goldenrod 2px solid;
 }
 
-.contenido .bene table tr th, .contenido .bene table td {
-  font-size: 1.3rem;
-  padding: .5rem;
+.contenido .bene .row .cont_bene span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: goldenrod;
 }
 
-@media all and (min-width: 980px) {
-  .contenido .bene {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+.contenido .bene .row .cont_bene p {
+  margin: 0;
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.contenido .bene .row img {
+  margin-top: 1rem;
+  width: 5rem;
 }
 
 .contenido .contenidoContacto {

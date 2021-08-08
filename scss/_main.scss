@@ -149,8 +149,7 @@ body{
                         object-fit: cover;
                     }
                 }         
-            }
-               
+            }               
             @media all and (min-width: $point-lg){
                 @include flex-dir-jus(row, space-around);          
                 align-items:stretch;                
@@ -194,30 +193,52 @@ body{
     }
 
     /* Sección BENEFICIOS */    
-    .bene{    
-        @include flex-dir-jus(column,space-around); 
-        align-items:center;
+    .bene{  
         border-top: gold 4px solid;
         border-bottom: gold 4px solid;
-        padding: 2rem;
-        background: linear-gradient(to bottom, #032c27, black,#032c27);        
-        padding: 98px 0 50px 0;
-        img{
-            width: 20%;
-        }
-        table{
-            color: #daa520;
-            border: #daa520 4px solid;
-            border-radius: 10px;            
-            margin: 2rem 0;            
-            tr th,td{
-                font-size: 1.3rem;
-                padding: .5rem;
+        background: linear-gradient(to bottom, #032c27, black,#032c27);  
+        padding-top: 98px;   
+        padding-bottom: 32px;   
+        text-align: center;         
+        .row{
+            justify-content: space-around;                  
+            .titulo-sectores{
+                color: goldenrod;
+            }      
+            h3{
+                color: $letra-blanco;
+                font-size: 1.2rem;
             }
+            .cont_bene{             
+                @include flex-dir-jus(column, center);
+                justify-content: center;
+                background-color: white;
+                margin: 1rem 0 1rem 0;
+                padding: 1rem .3rem;
+                border-radius: 10px; 
+                border: goldenrod 2px solid; 
+                span{
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: goldenrod;                
+                }
+                p{
+                    margin: 0;
+                    color: $letra-negro;
+                    font-size: 1rem;   
+                    font-weight: 700;                 
+                }                  
+                @media all and (min-width: $point-md){
+                              
+                }                
+            }  
+            img{
+                margin-top:1rem;
+                width: 5rem;
+            }          
         }
-        @media all and (min-width: $point-lg){
-            flex-direction: row;            
-        }               
+        
+                     
     }
     
     /* Sección CONTACTO HOME*/
