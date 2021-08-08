@@ -12,11 +12,16 @@
 }
 
 .cabecera__logo {
-  width: 4rem;
+  font-size: 1.4rem;
+  color: #cca124;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
 .cabecera__logo__img {
-  min-width: 2.5rem;
+  width: 2.2rem;
 }
 
 .cabecera__menu__link {
@@ -35,6 +40,11 @@
 .cabecera__redes__img {
   min-width: 1.5rem;
   width: 2rem;
+}
+
+.cabecera button {
+  outline: none;
+  border: goldenrod;
 }
 
 * {

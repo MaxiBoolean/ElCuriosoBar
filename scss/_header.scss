@@ -1,10 +1,15 @@
 .cabecera{
     border-bottom: 1px solid #ccc;
-    background-color: $bg-verde-claro;
+    background-color: $bg-verde-claro;    
     &__logo{
-        width: 4rem;
-        &__img{
-            min-width: 2.5rem; 
+         font-size: 1.4rem;
+         color: #cca124;
+         font-style: italic;
+         font-weight: 700;
+         letter-spacing: 1px;
+         text-decoration: none;
+        &__img{            
+            width: 2.2rem;            
         }    
     }
     &__menu__link{       
@@ -21,5 +26,9 @@
     &__redes__img{
         min-width: 1.5rem;
         width: 2rem; 
+    }
+    button{
+        outline: none;
+        border: goldenrod;
     }
 }
