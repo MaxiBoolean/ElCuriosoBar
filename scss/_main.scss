@@ -9,8 +9,8 @@
     color: rgb(218, 165, 32);
     background-color: rgba(255, 255, 255, 0.938);
     margin:1rem auto;
-    padding: .5rem;
-    border-radius: 20px;
+    padding: .5rem 1rem;
+    border-radius: 30px;
     letter-spacing: .2rem;
     font-size: 2rem;
     font-style: italic;
@@ -86,18 +86,12 @@ body{
         background-size: cover;
         background-position: center;
         h1{
-            margin-bottom: 50px;
+            margin-bottom: 50px;            
             background-color: rgb(255, 255, 255);
             font-size: 1.7rem;
-            letter-spacing: .4rem;   
-            img{
-                width: 2.2rem;
-            }
+            letter-spacing: .4rem;              
             @media all and (min-width: $point-md){
-                font-size: 2.5rem;
-                img{
-                    width: 2.9rem;               
-                }
+                font-size: 2.3rem;                
             }         
         }
         .contenidoNosotros{            
