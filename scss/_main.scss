@@ -9,13 +9,15 @@
     color: rgb(218, 165, 32);
     background-color: rgba(255, 255, 255, 0.938);
     margin:1rem auto;
-    padding: .5rem 1rem;
+    padding: .5rem .8rem;
     border-radius: 30px;
     letter-spacing: .2rem;
     font-size: 2rem;
     font-style: italic;
     font-weight:700;     
-    text-align: center;    
+    text-align: center;  
+    animation: fadeInDown;
+    animation-duration: 1s;  
 }
 .titulo-sectores{
     color: $letra-blanco;
@@ -25,6 +27,8 @@
     text-align: center;
     font-weight:700;      
     margin-bottom: 1rem;   
+    animation: flipInX;
+    animation-duration: 1s;
 }
 h3{    
     color: $letra-blanco;
@@ -106,7 +110,8 @@ body{
                 border-radius: 10px;
                 .titulos-nos{
                     font-size: 1.5rem;
-                    margin-bottom: .5rem;                                                  
+                    margin-bottom: .5rem;
+                    padding: .3rem 0;                                                  
                 }
                 h2{
                     text-align: justify;
@@ -178,6 +183,8 @@ body{
                 transform: scale(1);
                 transition: 0.1s;
                 object-fit: cover;
+                animation: zoomIn;
+                animation-duration: 1s;                 
                 &:hover{
                     transform: scale(1.1);
                     transition: 0.1s;  
@@ -210,7 +217,14 @@ body{
                 margin: 1rem 0 1rem 0;
                 padding: 1rem .3rem;
                 border-radius: 10px; 
-                border: goldenrod 2px solid; 
+                border: goldenrod 2px solid;  
+                transition: 0.1s;
+                animation: pulse;
+                animation-duration: 1s;              
+                &:hover{
+                    transform: scale(1.1);
+                    transition: 0.1s;                    
+                }
                 span{
                     font-size: 1.6rem;
                     font-weight: 700;
@@ -226,6 +240,9 @@ body{
             img{
                 margin-top:1rem;
                 width: 5rem;
+                animation: wobble;
+                animation-duration: 1s;
+                animation-delay: 1s;                
             }          
         }        
     }
@@ -336,6 +353,11 @@ body{
                 }
                 img{
                     width: 100%;
+                    transition: 0.1s; 
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: 0.1s;  
+                    }
                 }    
             }
         }

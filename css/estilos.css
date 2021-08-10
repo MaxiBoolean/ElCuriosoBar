@@ -17,19 +17,23 @@
   font-style: italic;
   font-weight: 700;
   letter-spacing: 1px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-animation: headShake;
+          animation: headShake;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .cabecera__logo__img {
   width: 2.1rem;
+  color: white;
 }
 
 .cabecera__logo:hover {
   color: #cca124;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.829);
+  -webkit-animation: pulse;
+          animation: pulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .cabecera__menu__link {
@@ -41,7 +45,7 @@
 }
 
 .cabecera__menu__link:hover {
-  color: #096e64;
+  color: #daa520;
   background-color: rgba(255, 255, 255, 0.932);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -51,6 +55,15 @@
   min-width: 1.5rem;
   width: 2rem;
   opacity: 85%;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.cabecera__redes__img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .cabecera button {
@@ -81,13 +94,17 @@
   color: goldenrod;
   background-color: rgba(255, 255, 255, 0.938);
   margin: 1rem auto;
-  padding: .5rem 1rem;
+  padding: .5rem .8rem;
   border-radius: 30px;
   letter-spacing: .2rem;
   font-size: 2rem;
   font-style: italic;
   font-weight: 700;
   text-align: center;
+  -webkit-animation: fadeInDown;
+          animation: fadeInDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .titulo-sectores {
@@ -98,6 +115,10 @@
   text-align: center;
   font-weight: 700;
   margin-bottom: 1rem;
+  -webkit-animation: flipInX;
+          animation: flipInX;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 h3 {
@@ -226,6 +247,7 @@ body {
 .contenido .nos .contenidoNosotros div .titulos-nos {
   font-size: 1.5rem;
   margin-bottom: .5rem;
+  padding: .3rem 0;
 }
 
 .contenido .nos .contenidoNosotros div h2 {
@@ -334,6 +356,10 @@ body {
   transition: 0.1s;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-animation: zoomIn;
+          animation: zoomIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .contenido .gale .contenidoImagenes img:hover {
@@ -384,6 +410,19 @@ body {
   padding: 1rem .3rem;
   border-radius: 10px;
   border: goldenrod 2px solid;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-animation: pulse;
+          animation: pulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.contenido .bene .row .cont_bene:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .contenido .bene .row .cont_bene span {
@@ -402,6 +441,12 @@ body {
 .contenido .bene .row img {
   margin-top: 1rem;
   width: 5rem;
+  -webkit-animation: wobble;
+          animation: wobble;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .contenido .contenidoContacto {
@@ -582,6 +627,15 @@ body {
 
 .contenido .contenidoContacto .contenidoRedes .redesDeContenido img {
   width: 100%;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.contenido .contenidoContacto .contenidoRedes .redesDeContenido img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 @media all and (min-width: 768px) {
@@ -733,6 +787,9 @@ body {
   color: white;
   font-weight: 700;
   font-size: 1.2rem;
+  text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 .sucursales .card .card-header {
@@ -741,6 +798,9 @@ body {
 
 .sucursales .card .collapse {
   width: 100%;
+  /* @media all and (min-width:$point-md){
+                width: 60%;
+            }  */
 }
 
 .sucursales .card .collapse .card-body {
@@ -753,14 +813,19 @@ body {
   color: white;
   font-size: 1.1rem;
   margin: .5rem 0 0 0;
+  font-weight: 700;
 }
 
 .sucursales .card .collapse .card-body iframe {
   border-radius: 10px;
   width: 100%;
+  height: 300px;
 }
 
 @media all and (min-width: 768px) {
+  .sucursales .card button {
+    font-size: 1.3rem;
+  }
   .sucursales .card .collapse {
     width: 60%;
   }
@@ -869,6 +934,25 @@ body {
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 1px;
+  -webkit-animation: slideInRight;
+          animation: slideInRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.grillaPadre .contacto .contContacto form .d1 {
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+}
+
+.grillaPadre .contacto .contContacto form .d2 {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+}
+
+.grillaPadre .contacto .contContacto form .d3 {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
 }
 
 .grillaPadre .contacto .contContacto form input {

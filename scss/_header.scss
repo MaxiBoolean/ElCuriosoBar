@@ -6,15 +6,18 @@
          color: #cca124;
          font-style: italic;
          font-weight: 700;
-         letter-spacing: 1px;    
-         transition: 0.2s;     
+         letter-spacing: 1px; 
+         animation: headShake;
+         animation-duration: 1s;   
         &__img{            
-            width: 2.1rem;                  
+            width: 2.1rem;
+            color: white;
         }           
         &:hover{
             color: #cca124;
-            transition: 0.2s;
-            text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.829)
+            animation: pulse;
+            animation-duration: 1s;
+
         }
     }    
     &__menu__link{       
@@ -24,7 +27,7 @@
         letter-spacing:1px; 
         border-radius: 20px; 
         &:hover{
-            color:$letra-verde-claro;
+            color:#daa520;
             background-color:rgba(255, 255, 255, 0.932);            
             transition: 0.3s;
         }
@@ -32,7 +35,12 @@
     &__redes__img{
         min-width: 1.5rem;
         width: 2rem;    
-        opacity: 85%;           
+        opacity: 85%;  
+        transition: 0.1s;   
+        &:hover{
+            transform: scale(1.1);
+            transition: 0.1s;
+        }      
     }
     button{
         outline: none;

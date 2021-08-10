@@ -60,6 +60,17 @@
                     font-weight:700;    
                     font-size: 1.3rem;
                     letter-spacing:1px;
+                    animation: slideInRight;
+                    animation-duration: 1s;
+                }
+                .d1{                    
+                    animation-duration: 1.3s;
+                }
+                .d2{
+                    animation-duration: 1.6s;
+                }
+                .d3{
+                    animation-duration: 1.9s;
                 }
                 input{
                     width: 100%;                    
