@@ -97,7 +97,7 @@
   padding: .5rem .8rem;
   border-radius: 30px;
   letter-spacing: .2rem;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-style: italic;
   font-weight: 700;
   text-align: center;
@@ -105,6 +105,12 @@
           animation: fadeInDown;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+}
+
+@media all and (min-width: 768px) {
+  .titulo-h1 {
+    font-size: 2.3rem;
+  }
 }
 
 .titulo-sectores {
@@ -209,14 +215,7 @@ body {
 .contenido .nos h1 {
   margin-bottom: 50px;
   background-color: white;
-  font-size: 1.7rem;
   letter-spacing: .4rem;
-}
-
-@media all and (min-width: 768px) {
-  .contenido .nos h1 {
-    font-size: 2.3rem;
-  }
 }
 
 .contenido .nos .contenidoNosotros {
@@ -836,18 +835,17 @@ body {
 .grillaPadre {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "nav nav" "rell rell" "contacto contacto" "foot foot";
-  -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
-  -ms-grid-rows: auto 20% auto auto;
-      grid-template-rows: auto 20% auto auto;
+      grid-template-areas: "nav" "rell" "contacto" "foot";
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto 30% auto auto;
+      grid-template-rows: auto 30% auto auto;
   justify-items: center;
 }
 
 .grillaPadre .Gcabecera {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: nav;
   width: 100%;
 }
@@ -855,7 +853,6 @@ body {
 .grillaPadre .rellenoImg {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: rell;
   justify-self: stretch;
   background-image: url("../media/contacto-img2.jpg");
@@ -886,7 +883,6 @@ body {
 .grillaPadre .contacto {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: contacto;
   -ms-grid-column-align: stretch;
       justify-self: stretch;
@@ -994,13 +990,12 @@ body {
 .grillaPadre .piePagina {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: foot;
   -ms-grid-column-align: stretch;
       justify-self: stretch;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 980px) {
   .grillaPadre {
         grid-template-areas: "nav nav" "rell contacto" "foot foot";
     -ms-grid-columns: 40% 60%;

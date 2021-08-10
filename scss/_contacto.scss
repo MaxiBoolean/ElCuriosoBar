@@ -3,12 +3,12 @@
 .grillaPadre{     
     display: grid;
     grid-template-areas: 
-    "nav nav"
-    "rell rell"
-    "contacto contacto"
-    "foot foot";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: auto 20% auto auto;
+    "nav"
+    "rell"
+    "contacto"
+    "foot";
+    grid-template-columns: auto;
+    grid-template-rows: auto 30% auto auto;
     justify-items: center;    
     .Gcabecera{              
         grid-area: nav;
@@ -110,7 +110,7 @@
         grid-area: foot;
         justify-self: stretch;
     }
-    @media all and (min-width: $point-md){
+    @media all and (min-width: $point-lg){
         grid-template-areas:        
         "nav nav"
         "rell contacto"
