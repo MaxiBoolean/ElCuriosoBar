@@ -25,7 +25,6 @@
 
 .cabecera__logo__img {
   width: 2.1rem;
-  color: white;
 }
 
 .cabecera__logo:hover {
@@ -54,7 +53,7 @@
 .cabecera__redes__img {
   min-width: 1.5rem;
   width: 2rem;
-  opacity: 85%;
+  opacity: 90%;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
@@ -77,9 +76,6 @@
   }
   .cabecera__logo__img {
     width: 2.8rem;
-  }
-  .cabecera__menu {
-    padding-right: 7rem;
   }
 }
 
@@ -190,7 +186,22 @@ body {
 
 .contenido .carrousel {
   background-color: black;
-  padding: .5rem 0;
+  padding: 0 0;
+  overflow: hidden;
+}
+
+.contenido .carrousel .logo_carrousel_izq {
+  position: relative;
+  width: 20%;
+  right: 10%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.contenido .carrousel .logo_carrousel_der {
+  position: relative;
+  width: 20%;
+  left: 10%;
 }
 
 .contenido .nos {
@@ -284,7 +295,6 @@ body {
     margin-right: 1rem;
   }
   .contenido .nos .contenidoNosotros div img {
-    width: 100%;
     border-radius: 10px;
     -o-object-fit: cover;
        object-fit: cover;
@@ -841,6 +851,7 @@ body {
   -ms-grid-rows: auto 30% auto auto;
       grid-template-rows: auto 30% auto auto;
   justify-items: center;
+  /* modal */
 }
 
 .grillaPadre .Gcabecera {
@@ -985,6 +996,40 @@ body {
   border-radius: 5px;
   outline: none;
   border: 2px goldenrod solid;
+  resize: none;
+}
+
+.grillaPadre .modal .modal-dialog .modal-content {
+  background-color: #032c27;
+  border: 2px #daa520 solid;
+}
+
+.grillaPadre .modal .modal-dialog .modal-content .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+}
+
+.grillaPadre .modal .modal-dialog .modal-content .modal-body img {
+  margin-top: 1rem;
+  width: 15%;
+}
+
+.grillaPadre .modal .modal-dialog .modal-content .btn {
+  font-weight: 700;
+  letter-spacing: .1rem;
+  background-color: #096e64;
 }
 
 .grillaPadre .piePagina {
@@ -1000,9 +1045,26 @@ body {
         grid-template-areas: "nav nav" "rell contacto" "foot foot";
     -ms-grid-columns: 40% 60%;
         grid-template-columns: 40% 60%;
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
+    -ms-grid-rows: auto 100% auto;
+        grid-template-rows: auto 100% auto;
     justify-items: center;
+  }
+  .grillaPadre .modal .modal-dialog .modal-content .modal-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.5rem;
+  }
+  .grillaPadre .modal .modal-dialog .modal-content .modal-body img {
+    margin: 0 .5rem 0 .5rem;
+    width: 10%;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

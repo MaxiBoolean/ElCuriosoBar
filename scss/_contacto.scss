@@ -101,11 +101,38 @@
                     margin-bottom: 1rem;
                     border-radius: 5px;  
                     outline: none; 
-                    border: 2px goldenrod solid;             
+                    border: 2px goldenrod solid;  
+                    resize: none;           
                 }              
             }
         }       
     }
+
+    /* modal */
+    .modal{        
+        .modal-dialog{
+            .modal-content{                
+                background-color: $bg-verde-oscuro;
+                border: 2px #daa520 solid;
+                .modal-body{
+                    @include flex-dir-jus(column,center);
+                    align-items: center;
+                    font-size: 1.2rem;                    
+                    img{
+                        margin-top: 1rem;
+                        width: 15%;                        
+                    }                                        
+                }
+                .btn{
+                    font-weight: 700;
+                    letter-spacing: .1rem;
+                    background-color: $bg-verde-claro;
+                    
+                }
+            }
+        }
+    }
+
     .piePagina{    
         grid-area: foot;
         justify-self: stretch;
@@ -116,7 +143,21 @@
         "rell contacto"
         "foot foot";
         grid-template-columns: 40% 60%;
-        grid-template-rows: auto auto auto;
-        justify-items: center;        
+        grid-template-rows: auto 100% auto;
+        justify-items: center;    
+        .modal{        
+            .modal-dialog{
+                .modal-content{ 
+                    .modal-body{
+                        @include flex-dir-jus(row,center);
+                        font-size: 1.5rem;                    
+                        img{
+                            margin: 0 .5rem 0 .5rem;
+                            width: 10%;                        
+                        }                                        
+                    }
+                }
+            }
+        }
     }
 }

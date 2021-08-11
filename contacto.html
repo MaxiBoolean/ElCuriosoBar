@@ -21,10 +21,9 @@
         <header class="cabecera px-lg-3 mx-0 sticky-top">
             <nav class="cabecera__nav container-fluid navbar navbar-expand-lg justify-content-between">
                 <a class="cabecera__logo navbar-brand pr-2 py-0 mx-0" href="index.html">
-                    <img src="media/logo-dorado.png" class="cabecera__logo__img img-fluid mr-1" alt="imagen logo">
-                    El Curioso Bar
+                    <img src="media/logo-dorado.png" class="cabecera__logo__img mr-1" alt="imagen logo">El Curioso Bar
                 </a>    
-                <button class="navbar-toggler navbar-dark bg-transparent border border-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler navbar-dark bg-transparent border border-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="cabecera__menu collapse navbar-collapse text-center justify-content-md-center" id="navbarNav">
@@ -55,6 +54,7 @@
             <p>¡Contactanos por consultas y eventos!</p>
         </div>
     </div>
+    <!-- formulario -->
     <div class="contacto">
         <div class="contContacto ">
             <h1 class="titulo-h1">El Curioso Bar - Contacto</h1>
@@ -67,8 +67,22 @@
                 <input type="email" name= "correo" id="mail" placeholder="Ej: nombre@gmail.com">
                 <label for="mensaje" class="d3">Ingresa tu mensaje</label>
                 <textarea name="mensaje" id="mensaje"></textarea>
-                <input class="boton" type="submit" name="enviar" value="Enviar">
+                <input class="boton" type="button" name="enviar" value="Enviar" data-toggle="modal" data-target="#exampleModal">
             </form>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-body titulo-sectores p-1">
+                    <img src="media/logosvg.svg" alt="imagen logo" class="d-none d-lg-block">
+                    ¡Gracias por contactarte!
+                    <img src="media/logosvg.svg" alt="imagen logo">
+                </div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+            </div>
         </div>
     </div>
 

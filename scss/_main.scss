@@ -78,7 +78,19 @@ body{
     /* CARROUSEL */
     .carrousel{        
         background-color: black;
-        padding: .5rem 0;
+        padding: 0 0;
+        overflow: hidden; 
+        .logo_carrousel_izq{
+            position: relative;
+            width: 20%; 
+            right:10%;   
+            transform: scaleX(-1);                  
+        }
+        .logo_carrousel_der{            
+            position:relative;
+            width: 20%; 
+            left:10%;                              
+        }
     }
 
     /* Sección NOSOTROS */
@@ -141,8 +153,7 @@ body{
                         width: 5%;                
                         margin-right: 1rem;                
                     }
-                    img{                        
-                        width: 100%;
+                    img{ 
                         border-radius: 10px; 
                         object-fit: cover;
                     }

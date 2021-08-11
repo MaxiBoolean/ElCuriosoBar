@@ -1,23 +1,21 @@
 .cabecera{
     border-bottom: 1px solid #ccc;
     background-color: $bg-verde-claro;    
-    &__logo{
-         font-size: 1.5rem;
-         color: #cca124;
-         font-style: italic;
-         font-weight: 700;
-         letter-spacing: 1px; 
-         animation: headShake;
-         animation-duration: 1s;   
+    &__logo{             
+        font-size: 1.5rem;
+        color: #cca124;
+        font-style: italic;
+        font-weight: 700;
+        letter-spacing: 1px; 
+        animation: headShake;
+        animation-duration: 1s;          
         &__img{            
             width: 2.1rem;
-            color: white;
         }           
         &:hover{
             color: #cca124;
             animation: pulse;
             animation-duration: 1s;
-
         }
     }    
     &__menu__link{       
@@ -35,7 +33,7 @@
     &__redes__img{
         min-width: 1.5rem;
         width: 2rem;    
-        opacity: 85%;  
+        opacity: 90%;  
         transition: 0.1s;   
         &:hover{
             transform: scale(1.1);
@@ -49,14 +47,9 @@
     @media all and (min-width: $point-lg){
         &__logo{
             font-size: 1.8rem;
-            
            &__img{            
-               width: 2.8rem;            
+               width: 2.8rem;                         
            }    
        }
-        &__menu{
-            padding-right: 7rem;
-        }
-    }     
-    
+    } 
 }
