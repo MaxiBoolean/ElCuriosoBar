@@ -371,6 +371,28 @@ body{
                 }    
             }
         }
+        .modal{        
+            .modal-dialog{
+                .modal-content{                
+                    background-color: $bg-verde-oscuro;
+                    border: 2px #daa520 solid;
+                    .modal-body{
+                        @include flex-dir-jus(column,center);
+                        align-items: center;
+                        font-size: 1.2rem;                    
+                        img{
+                            margin-top: 1rem;
+                            width: 15%;                        
+                        }                                        
+                    }
+                    .btn{
+                        font-weight: 700;
+                        letter-spacing: .1rem;
+                        background-color: $bg-verde-claro;                        
+                    }
+                }
+            }
+        }
         @media all and (min-width: $point-md){
             flex-flow: wrap;
             h3{
@@ -433,6 +455,20 @@ body{
                         a{ 
                             width: 3%;                       
                         }                      
+                    }
+                }
+                .modal{        
+                    .modal-dialog{
+                        .modal-content{ 
+                            .modal-body{
+                                @include flex-dir-jus(row,center);
+                                font-size: 1.5rem;                    
+                                img{
+                                    margin: 0 .5rem 0 .5rem;
+                                    width: 10%;                        
+                                }                                        
+                            }
+                        }
                     }
                 }
             }

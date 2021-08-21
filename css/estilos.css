@@ -647,6 +647,39 @@ body {
   transition: 0.1s;
 }
 
+.contenido .contenidoContacto .modal .modal-dialog .modal-content {
+  background-color: #032c27;
+  border: 2px #daa520 solid;
+}
+
+.contenido .contenidoContacto .modal .modal-dialog .modal-content .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+}
+
+.contenido .contenidoContacto .modal .modal-dialog .modal-content .modal-body img {
+  margin-top: 1rem;
+  width: 15%;
+}
+
+.contenido .contenidoContacto .modal .modal-dialog .modal-content .btn {
+  font-weight: 700;
+  letter-spacing: .1rem;
+  background-color: #096e64;
+}
+
 @media all and (min-width: 768px) {
   .contenido .contenidoContacto {
     -ms-flex-flow: wrap;
@@ -703,6 +736,23 @@ body {
   }
   .contenido .contenidoContacto .contenidoRedes .redesDeContenido a {
     width: 3%;
+  }
+  .contenido .contenidoContacto .modal .modal-dialog .modal-content .modal-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.5rem;
+  }
+  .contenido .contenidoContacto .modal .modal-dialog .modal-content .modal-body img {
+    margin: 0 .5rem 0 .5rem;
+    width: 10%;
   }
 }
 

@@ -30,7 +30,7 @@
                     <a class="cabecera__menu__link nav-link" href="#">INICIO</a>
                     <a class="cabecera__menu__link nav-link" href="#nosotros">NOSOTROS</a>
                     <a class="cabecera__menu__link nav-link" href="#galeria">GALERÍA</a>
-                    <a class="cabecera__menu__link nav-link"  href="#beneficios">BENEFICIOS</a>
+                    <a class="cabecera__menu__link nav-link" href="#beneficios">BENEFICIOS</a>
                     <a class="cabecera__menu__link nav-link"  href="sucursales.html">SUCURSALES</a>
                     <a class="cabecera__menu__link nav-link"  href="contacto.html">CONTACTO</a>
                 </div>
@@ -171,7 +171,7 @@
                 <form action="" method="POST">
                     <label for="correo"><span>RECIBÍ NUESTROS EVENTOS</span></label>
                     <input type="email" name= "correo" id="correo" placeholder="Ej: nombre@gmail.com">
-                    <input class="btn-enviar" type="submit" name="enviar" value="Enviar">
+                    <input class="boton btn-enviar" type="button" name="enviar" value="enviar" data-toggle="modal" data-target="#exampleModal">
                 </form>                
             </div>  
             <div class="sucurCercana">
@@ -182,11 +182,24 @@
             <div class="contenidoRedes">
                 <h3>NUESTRAS REDES</h3>
                 <div class="redesDeContenido">
-                    <a href="" target="_blank" rel="noopener" rel="noreferrer"><img src="media/whatsapp-bl.png" alt="icono whatsapp"></a>
+                    <a href="https://web.whatsapp.com/" target="_blank" rel="noopener" rel="noreferrer"><img src="media/whatsapp-bl.png" alt="icono whatsapp"></a>
                     <a href="https://www.facebook.com" target="_blank" rel="noopener" rel="noreferrer"><img src="media/facebook-bl.png" alt="icono facebook"></a>
                     <a href="https://www.instagram.com" target="_blank" rel="noopener" rel="noreferrer"><img src="media/instagram-bl.png" alt="icono instagram"></a>
                 </div>  
-            </div>      
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-body titulo-sectores p-1">
+                            <img src="media/logosvg.svg" alt="imagen logo" class="d-none d-lg-block">
+                            ¡Gracias por suscribirte!
+                            <img src="media/logosvg.svg" alt="imagen logo">
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
